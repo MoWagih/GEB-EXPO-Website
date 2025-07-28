@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+@import "tailwindcss";
+
+* {
+    font-family: "Changa", sans-serif;
+    box-sizing: border-box;
+    /* direction: rtl; */
+}
+
+.App,
+body,
+#root {
+    background-image: url(./assets/imgs/Cover.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
