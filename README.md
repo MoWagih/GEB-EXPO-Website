@@ -39,11 +39,3 @@ The website aims to:
 - ✅ News & blog section for expo updates.
 - ✅ Integration with external APIs for registration forms & ticketing.
 
----
-
-### 📄 Short Tagline
-> “A bilingual (Arabic/English) responsive website for the GEB Expo, built with React and Tailwind, featuring modern design, RTL support, and dynamic pages for visitors and exhibitors.”
-
----
-
-**📅 Last updated:** July 28, 2025
