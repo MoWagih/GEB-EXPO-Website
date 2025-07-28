@@ -1,12 +1,49 @@
-# React + Vite
+# GEB Expo – Bilingual Educational Expo Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **fully responsive bilingual website** (Arabic & English) developed for the **GEB Expo**, an international educational exhibition held in Riyadh, Saudi Arabia.
 
-Currently, two official plugins are available:
+The website is designed to reflect the **modern and professional spirit of global education expos** and to serve as a central platform for:
+- **Visitors** looking for event information and registration.
+- **Exhibitors & Partners** showcasing universities, schools, and educational services.
+- **Media and press coverage** highlighting the event’s impact.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Key Features
+- 🌍 **Bilingual Support (Arabic/English)** – Seamless language switch using `react-i18next` with full **RTL/LTR** direction handling.
+- 🎨 **Modern UI/UX** – Clean, visually appealing design inspired by leading expo websites (like Cairo ICT).
+- 📱 **Responsive Layout** – Fully optimized for desktop, tablet, and mobile devices.
+- 📂 **Dynamic Pages** – Includes Home, About, Program, Exhibitors, Media, Register, and Contact sections.
+- 🗂 **Scalable Structure** – Easy to expand with more pages, news sections, or sponsors.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+- **React.js** – Component-based front-end development.
+- **React Router** – Smooth navigation between pages.
+- **react-i18next** – Internationalization & language management.
+- **Tailwind CSS** – Utility-first styling for clean and responsive UI.
+
+---
+
+## 🎯 Purpose
+The website aims to:
+- Promote **GEB Expo 2025** and its mission to connect global universities, schools, and students.
+- Provide an easy **registration process** for visitors and exhibitors.
+- Showcase sponsors, partners, and media coverage.
+
+---
+
+## 📌 Future Enhancements
+- ✅ Exhibitor Dashboard for booth management.
+- ✅ News & blog section for expo updates.
+- ✅ Integration with external APIs for registration forms & ticketing.
+
+---
+
+### 📄 Short Tagline
+> “A bilingual (Arabic/English) responsive website for the GEB Expo, built with React and Tailwind, featuring modern design, RTL support, and dynamic pages for visitors and exhibitors.”
+
+---
+
+**📅 Last updated:** July 28, 2025
