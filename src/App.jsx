@@ -9,6 +9,7 @@ import ProgramPage from './Pages/ProgramPage';
 import ServicesPage from './Pages/ServicesPage';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
+import RegisterPage from './Pages/RegisterPage';
 
 
 
@@ -46,7 +47,7 @@ export default function App() {
           <Route path='/Program' element={<ProgramPage />} />
           <Route path='/Services' element={<ServicesPage />} />
           <Route path='/Media' element={<h1>الإعلام</h1>} />
-          <Route path='/Register' element={<h1>التسجيل</h1>} />
+          <Route path='/Register' element={<RegisterPage />} />
           <Route path='/Contact' element={<ContactPage />} />
         </Route>
       </Routes>

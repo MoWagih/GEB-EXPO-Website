@@ -27,7 +27,7 @@ export default function Navbar() {
       {/* Logo and Menu Bar */}
       <div
         className={`flex items-center justify-between p-3 xl:p-0 xl:ps-4 xl"pe-4 z-100 lg:ps-6 lg:pe-6 fixed top-0 w-full transition-all duration-500 ${
-          isScrolled ? "bg-[#0f6340ee] border-b-2 border-[#f0f0f0] shadow-lg" : "bg-transparent"
+          isScrolled ? "bg-[#0f6340ee] shadow-lg" : "bg-transparent"
         }`}
       >
         <img

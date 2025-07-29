@@ -13,7 +13,7 @@ import Program from '../Sections/Program'
 
 export default function Home() {
   return (
-    <div className='p-4 sm:p-12 flex flex-col justify-center gap-12 md:gap-22 sm:pt-4 md:pt-2 sm:gap-22 lg:pt-[77px] xl:pt-[30px] xl:justify-start xl:items-start xl:gap-22'>
+    <div className='p-4 xl:p-0 sm:p-12 flex flex-col justify-center gap-12 md:gap-22 sm:pt-4 md:pt-2 sm:gap-22 lg:pt-[77px] xl:pt-[30px] xl:justify-start xl:items-start xl:gap-22'>
         {/* Hero Section */}
         <HeroSection />
         {/* King Salman  */}

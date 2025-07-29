@@ -1,9 +1,10 @@
 import { FaArrowLeft } from 'react-icons/fa'
 import { GrLocationPin } from 'react-icons/gr'
+import { Link } from 'react-router-dom'
 
 export default function () {
   return (
-    <div className='h-[100vh] flex flex-col justify-center gap-2'>
+    <div className='h-[100vh] flex flex-col justify-center gap-2 xl:p-8'>
         {/* Main Title */}
        <div className='flex flex-col text-white text-center xl:text-start'>
             <h1 className='text-[38px] sm:text-[48px] md:text-[58px] lg:text-[80px] xl:text-[78px] font-semibold'>اكتشــــــــــف مستقبلــــــك التعليمــــــــي</h1>
@@ -34,8 +35,10 @@ export default function () {
         
        {/* Attendance */}
        <div className='w-[95%] sm:w-[85%] md:w-[80%] xl:w-[38%] xl:p-2 sm:ps-3 sm:pe-3 md:ps-6 md:pe-6 lg:ps-8 lg:pe-8 bg-white shadow-2xl mt-4 p-2 self-center xl:self-start text-black flex items-center justify-between font-semibold'>
-        <h3 className='lg:text-[24px] xl:text-[18px]'>سجــل حضــورك الأن</h3>
-        <FaArrowLeft className='lg:text-[24px] xl:text-[18px]' />
+            <Link to='/Register' className='w-full flex items-center justify-between'>
+            <h3 className='lg:text-[24px] xl:text-[18px]'>سجــل حضــورك الأن</h3>
+            <FaArrowLeft className='lg:text-[24px] xl:text-[18px]' />
+            </Link>
        </div>
     </div>
   )

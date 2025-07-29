@@ -1,5 +1,6 @@
 import { FaArrowLeft } from "react-icons/fa";
 import logo from '../../public/Logo.png'
+import { Link } from "react-router-dom";
 
 
 export default function JoinExpo() {
@@ -21,8 +22,10 @@ export default function JoinExpo() {
 
           {/* CTA */}
           <div className='w-[95%] sm:w-[85%] md:w-[60%] xl:w-[100%] xl:p-2 xl:ps-6 xl:pe-6 sm:ps-3 sm:pe-3 md:ps-6 md:pe-6 lg:ps-8 lg:pe-8 bg-white shadow-2xl mt-4 p-2 self-center text-black flex items-center justify-between font-semibold'>
-          <h3 className='lg:text-[24px] xl:text-[18px]'>انضــم إلينــا</h3>
-          <FaArrowLeft className='lg:text-[24px] xl:text-[18px]' />
+            <Link to="/Register" className="w-full flex items-center justify-between">
+              <h3 className='lg:text-[24px] xl:text-[18px]'>انضــم إلينــا</h3>
+              <FaArrowLeft className='lg:text-[24px] xl:text-[18px]' />
+            </Link>
         </div>
      
      </div>

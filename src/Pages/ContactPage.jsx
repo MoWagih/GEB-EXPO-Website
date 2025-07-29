@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import HeroImg from "../assets/imgs/expo4.png"
 import Footer from "../Components/Footer";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function ContactPage() {
   return (
@@ -38,7 +39,7 @@ export default function ContactPage() {
           {[
             { icon: <FaInstagram />, link: "https://instagram.com" },
             { icon: <FaLinkedin />, link: "https://linkedin.com" },
-            { icon: <FaTwitter />, link: "https://twitter.com" },
+            { icon: <FaXTwitter />, link: "https://twitter.com" },
           ].map((item, index) => (
             <motion.a
               key={index}
