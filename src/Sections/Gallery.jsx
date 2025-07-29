@@ -9,14 +9,14 @@ export default function Gallery() {
 
   return (
     <div className='bg-[#00000040] shadow-2xl w-full flex flex-col xl:flex-row justify-center items-center gap-4 p-3 pt-6 pb-6 xl:p-10 text-white'>
-      <h2 className="text-3xl text-center mb-6">معرض الصور</h2>
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 max-w-4xl mx-auto">
         {images.map((src, index) => (
           <img 
             key={index} 
             src={src} 
             alt={`Gallery ${index + 1}`} 
-            className="shadow-2xs hover:scale-105 transition-transform duration-300"
+            className="shadow-2xl border-1 hover:scale-105 transition-transform duration-300"
           />
         ))}
       </div>

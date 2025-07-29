@@ -1,6 +1,5 @@
 import { FaArrowLeft } from 'react-icons/fa'
 import { GrLocationPin } from 'react-icons/gr'
-// import Hero from '../assets/imgs/Hero.png'
 
 export default function () {
   return (
@@ -11,7 +10,6 @@ export default function () {
             <h2 className='pt-4 text-[16px] sm:text-[22px] lg:text-[32px]'> مــع أبـــرز الجامعـــات العالميـــة</h2>
        </div>
 
-       {/* <img className='absolute left-0 top-0 w-[55%]' src={Hero} alt="Hero" /> */}
 
         {/* Date and Location */}
         <div className='flex flex-col sm:justify-center gap-2 sm:flex-row w-full xl:mt-4 xl:flex-col'>
