@@ -9,6 +9,7 @@ import Counter from '../Sections/Counter'
 import Gallery from '../Sections/Gallery'
 import JoinExpo from '../Sections/JoinExpo'
 import Partners from '../Sections/Partners'
+import Program from '../Sections/Program'
 
 export default function Home() {
   return (
@@ -29,11 +30,15 @@ export default function Home() {
         {/* Counter */}
         <Counter />
 
+        {/* Be a part of Expo */}
+        <JoinExpo />
+
+        {/* Program */}
+        <Program />
+
         {/* Gallery */}
         <Gallery />
 
-        {/* Be a part of Expo */}
-        <JoinExpo />
 
         {/* Exhibitors & Partners */}
         <Partners />

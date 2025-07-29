@@ -5,6 +5,10 @@ import "./i18n";
 import { useTranslation } from 'react-i18next';
 import Home from './Pages/Home';
 import AnimatedCursor from "react-animated-cursor";
+import ProgramPage from './Pages/ProgramPage';
+import ServicesPage from './Pages/ServicesPage';
+import AboutPage from './Pages/AboutPage';
+import ContactPage from './Pages/ContactPage';
 
 
 
@@ -27,7 +31,7 @@ export default function App() {
       <AnimatedCursor
         innerSize={8}
         outerSize={35}
-        color="255, 122, 0"     // لون (RGB)
+        color="255, 122, 0" 
         outerAlpha={0.3}
         innerScale={1}
         outerScale={2}
@@ -38,12 +42,12 @@ export default function App() {
       <Routes>
         <Route>
           <Route path='/' element={<Home />} />
-          <Route path='/About' element={<h1>عن المعرض</h1>} />
-          <Route path='/Program' element={<h1>برنامج المعرض</h1>} />
-          <Route path='/Exhibitors' element={<h1>العارضون</h1>} />
+          <Route path='/About' element={<AboutPage />} />
+          <Route path='/Program' element={<ProgramPage />} />
+          <Route path='/Services' element={<ServicesPage />} />
           <Route path='/Media' element={<h1>الإعلام</h1>} />
           <Route path='/Register' element={<h1>التسجيل</h1>} />
-          <Route path='/Contact' element={<h1>التواصل</h1>} />
+          <Route path='/Contact' element={<ContactPage />} />
         </Route>
       </Routes>
     </div>

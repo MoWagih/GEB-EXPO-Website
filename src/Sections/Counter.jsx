@@ -5,12 +5,12 @@ export default function Counter() {
     const highlights = [
         { number: 50, suffix: "+", label: "جامعــة " },
         { number: 10, suffix: "", label: "دول مشاركـــة" },
-        { number: 4000, suffix: "+", label: "زائــر متوقـــع" },
+        { number: 4000, suffix: "+", label: "زائــر متوقـــع يوميـــاً" },
         { number: 3, suffix: "", label: "أيام من الفعاليات" }
     ]
 
   return (
-    <div className='bg-[#00000040] shadow-2xl w-full flex flex-col xl:flex-row justify-center items-center gap-4 lg:gap-8 p-3 pt-6 pb-6 lg:p-12 xl:p-10 text-white'>
+    <div className='bg-[#00000059] shadow-2xl w-full flex flex-col xl:flex-row justify-center items-center gap-4 lg:gap-8 p-3 pt-6 pb-6 lg:p-12 xl:p-10 text-white'>
         {/* Title of Section */}
          <div className="flex flex-col font-bold text-[32px] md:text-[36px] lg:text-[54px] xl:bg-[#6fe7a15b] xl:ps-8 xl:pe-8 xl:p-4 xl:shadow-2xl">
             <p>أبــــــــــــرز</p>
