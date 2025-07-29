@@ -1,15 +1,17 @@
-import React from 'react'
 import { FaArrowLeft } from 'react-icons/fa'
 import { GrLocationPin } from 'react-icons/gr'
+// import Hero from '../assets/imgs/Hero.png'
 
 export default function () {
   return (
     <div className='h-[100vh] flex flex-col justify-center gap-2'>
-         {/* Main Title */}
+        {/* Main Title */}
        <div className='flex flex-col text-white text-center xl:text-start'>
             <h1 className='text-[38px] sm:text-[48px] md:text-[58px] lg:text-[80px] xl:text-[78px] font-semibold'>اكتشــــــــــف مستقبلــــــك التعليمــــــــي</h1>
             <h2 className='pt-4 text-[16px] sm:text-[22px] lg:text-[32px]'> مــع أبـــرز الجامعـــات العالميـــة</h2>
        </div>
+
+       {/* <img className='absolute left-0 top-0 w-[55%]' src={Hero} alt="Hero" /> */}
 
         {/* Date and Location */}
         <div className='flex flex-col sm:justify-center gap-2 sm:flex-row w-full xl:mt-4 xl:flex-col'>

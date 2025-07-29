@@ -4,6 +4,8 @@ import Navbar from './Components/Navbar'
 import "./i18n";
 import { useTranslation } from 'react-i18next';
 import Home from './Pages/Home';
+import AnimatedCursor from "react-animated-cursor";
+
 
 
 export default function App() {
@@ -21,6 +23,16 @@ export default function App() {
 
   return (
     <div>
+      {/* Cursor */}
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={35}
+        color="255, 122, 0"     // لون (RGB)
+        outerAlpha={0.3}
+        innerScale={1}
+        outerScale={2}
+      />
+      
       {/* Static Nav-bar */}
       <Navbar />
       <Routes>

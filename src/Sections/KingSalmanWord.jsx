@@ -3,7 +3,7 @@ import KingSalman from '../assets/imgs/KingSalman.jpg'
 
 export default function KingSalmanWord() {
   return (
-    <div className="bg-[#00000059] shadow-2xl w-full text-white flex flex-col-reverse pt-4 lg:p-10">
+    <div className="bg-[#00000040] shadow-2xl w-full text-white flex flex-col-reverse pt-4 lg:p-10">
         {/* Titles and Img */}
         <div className='flex flex-col items-center justify-center p-3 gap-4'>
            {/* King Salman Titles */}

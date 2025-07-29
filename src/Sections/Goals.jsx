@@ -6,19 +6,18 @@ import { SiKnowledgebase } from 'react-icons/si'
 
 export default function Goals() {
   return (
-    <div className='bg-[#0000002c] w-full shadow-2xl p-3 pt-6 pb-6 sm:p-10 flex flex-col xl:flex-row items-center gap-3 lg:gap-8 text-white'>
+    <div className='bg-[#00000040] w-full shadow-2xl p-3 pt-6 pb-6 sm:p-10 flex flex-col xl:flex-row items-center gap-3 lg:gap-8 text-white'>
         {/* Title of Section */}
         <div className="flex flex-col font-bold text-[32px] md:text-[36px] lg:text-[54px] xl:bg-[#6fe7a15b] xl:ps-8 xl:pe-8 xl:p-4 xl:shadow-2xl">
             <p>أهــــــداف</p>
             <p>المعــــرض</p>
         </div>
-
         {/* Cards */}
        <div className='flex flex-col xl:p-2 md:flex-row md:flex-wrap w-full gap-3'>
              {/* Card 1 */}
-                <div className='bg-[#00000059] w-full md:w-[48%] xl:w-[48%] p-4 flex flex-col items-center justify-center gap-2 shadow-2xl'>
+                <div className='bg-[#00000059] w-full md:w-[48%] xl:w-[48%] p-4 flex flex-col items-center justify-center gap-2 shadow-2xl hover:scale-105 hover:border-1 transition duration-300'>
                     {/* Icon */}
-                    <SiKnowledgebase className='text-[#09a149] text-[28px] lg:text-[34px]' />
+                    <SiKnowledgebase className='text-[#08c757] hover:text-[#FF7A00] text-[28px] lg:text-[34px]' />
 
                     {/* Title */}
                     <h2 className='font-medium lg:text-[28px] xl:text-[18px]'>التعريـف</h2>
@@ -28,9 +27,9 @@ export default function Goals() {
                 </div>
 
                  {/* Card 2 */}
-                 <div className='bg-[#00000059] w-full md:w-[48%] xl:w-[48%] p-4 flex flex-col items-center justify-center gap-2 shadow-2xl'>
+                 <div className='bg-[#00000059] w-full md:w-[48%] xl:w-[48%] p-4 flex flex-col items-center justify-center gap-2 shadow-2xl hover:scale-105 hover:border-1 transition duration-300'>
                     {/* Icon */}
-                    <GiProgression className='text-[#09a149] text-[28px] lg:text-[34px]' />
+                    <GiProgression className='text-[#08c757] hover:text-[#FF7A00] text-[28px] lg:text-[34px]' />
 
                     {/* Title */}
                     <h2 className='font-medium lg:text-[28px] xl:text-[18px]'>توفيــر</h2>
@@ -40,9 +39,9 @@ export default function Goals() {
                 </div>
 
                 {/* Card 3 */}
-                <div className='bg-[#00000059] w-full md:w-[48%] xl:w-[48%] p-4 flex flex-col items-center justify-center gap-2 shadow-2xl'>
+                <div className='bg-[#00000059] w-full md:w-[48%] xl:w-[48%] p-4 flex flex-col items-center justify-center gap-2 shadow-2xl hover:scale-105 hover:border-1 transition duration-300'>
                     {/* Icon */}
-                    <FaUsersViewfinder className='text-[#09a149] text-[28px] lg:text-[34px]' />
+                    <FaUsersViewfinder className='text-[#08c757] hover:text-[#FF7A00] text-[28px] lg:text-[34px]' />
 
                     {/* Title */}
                     <h2 className='font-medium lg:text-[28px] xl:text-[18px]'>إيجــاد</h2>
@@ -52,9 +51,9 @@ export default function Goals() {
                 </div>
 
                 {/* Card 4 */}
-                <div className='bg-[#00000059] w-full md:w-[48%] xl:w-[48%] p-4 flex flex-col items-center justify-center gap-2 shadow-2xl'>
+                <div className='bg-[#00000059] w-full md:w-[48%] xl:w-[48%] p-4 flex flex-col items-center justify-center gap-2 shadow-2xl hover:scale-105 hover:border-1 transition duration-300'>
                     {/* Icon */}
-                    <FaUsersViewfinder className='text-[#09a149] text-[28px] lg:text-[34px]' />
+                    <FaUsersViewfinder className='text-[#08c757] hover:text-[#FF7A00] text-[28px] lg:text-[34px]' />
 
                     {/* Title */}
                     <h2 className='font-medium lg:text-[28px] xl:text-[18px]'>دعــم</h2>
