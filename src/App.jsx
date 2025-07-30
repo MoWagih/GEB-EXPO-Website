@@ -10,6 +10,7 @@ import ServicesPage from './Pages/ServicesPage';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
 import RegisterPage from './Pages/RegisterPage';
+import MediaPage from './Pages/MediaPage';
 
 
 
@@ -43,12 +44,12 @@ export default function App() {
       <Routes>
         <Route>
           <Route path='/' element={<Home />} />
-          <Route path='/About' element={<AboutPage />} />
-          <Route path='/Program' element={<ProgramPage />} />
-          <Route path='/Services' element={<ServicesPage />} />
-          <Route path='/Media' element={<h1>الإعلام</h1>} />
+          <Route path='/عن المعرض' element={<AboutPage />} />
+          <Route path='/البرنامج' element={<ProgramPage />} />
+          <Route path='/الخدمات' element={<ServicesPage />} />
+          <Route path='/الإعلام' element={<MediaPage />} />
           <Route path='/Register' element={<RegisterPage />} />
-          <Route path='/Contact' element={<ContactPage />} />
+          <Route path='/تواصل معنا' element={<ContactPage />} />
         </Route>
       </Routes>
     </div>

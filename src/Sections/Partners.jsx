@@ -15,10 +15,8 @@ export default function Partners() {
   return (
     <section className="relative w-full py-16 px-6 flex flex-col items-center text-center">
       
-      {/* ✅ خلفية Gradient زي Cairo ICT */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#002d2d] via-[#014c39] to-[#0c6e4e] opacity-95 -z-10"></div>
 
-      {/* ✅ العنوان */}
       <motion.h2 
         className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10 relative"
         initial={{ opacity: 0, y: -30 }}
@@ -30,7 +28,6 @@ export default function Partners() {
         <span className="block w-20 h-[3px] bg-green-400 mt-4 mx-auto"></span>
       </motion.h2>
 
-      {/* ✅ Grid للشعارات مع أنيميشن */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
         {logos.map((logo, i) => (
           <motion.div

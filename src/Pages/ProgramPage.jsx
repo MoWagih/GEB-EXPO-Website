@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FaRegHandshake } from "react-icons/fa";
 import { MdOutlineWork } from "react-icons/md";
 import { RiPresentationLine } from "react-icons/ri";
-import HeroImg from '../assets/imgs/expo2.jpg'
+import HeroImg from "../assets/imgs/expo2.jpg";
 import Footer from "../Components/Footer";
 
 export default function ProgramPage() {
@@ -27,11 +27,9 @@ export default function ProgramPage() {
 
   return (
     <div className="flex flex-col gap-6 items-center justify-center">
-      
       <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] pt-[80px] lg:pt-[100px]">
-        {/* 🔥 صورة البانر */}
         <img
-          src={HeroImg}   
+          src={HeroImg}
           alt="برنامج المعرض"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -41,7 +39,8 @@ export default function ProgramPage() {
             برنامج المعرض
           </h1>
           <p className="text-sm sm:text-base lg:text-lg text-gray-200 max-w-2xl leading-relaxed">
-            ثلاثة أيام من الفعاليات والأنشطة الملهمة — من حفل الافتتاح الرسمي إلى ورش العمل والعروض التقنية.
+            ثلاثة أيام من الفعاليات والأنشطة الملهمة — من حفل الافتتاح الرسمي
+            إلى ورش العمل والعروض التقنية.
           </p>
         </div>
       </div>
@@ -56,7 +55,6 @@ export default function ProgramPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.15 }}
           >
-
             {day.icon}
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-3 text-green-600">
               {day.title}
@@ -65,7 +63,6 @@ export default function ProgramPage() {
               {day.description}
             </p>
           </motion.div>
-
         ))}
       </div>
 

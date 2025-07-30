@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaArrowLeft } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export default function Program() {
   return (
@@ -16,8 +17,10 @@ export default function Program() {
             <p className='text-justify text-[14px] sm:text-[15px] md:text-[16px] lg:text-[22px] p-2'>يقدّم معرض GEB Expo برنامجًا متنوعًا من الفعاليات على مدار ثلاثة أيام، يشمل ورش عمل تفاعلية، جلسات حوارية مع خبراء التعليم، وعروضًا مميزة من الجامعات المشاركة.</p>
 
             <div className='w-[95%] sm:w-[85%] md:w-[80%] xl:w-[45%] xl:p-2 sm:ps-3 sm:pe-3 md:ps-6 md:pe-6 lg:ps-8 lg:pe-8 bg-white shadow-2xl mt-4 p-2 self-center xl:self-start text-black flex items-center justify-between font-semibold'>
-                <h3 className='lg:text-[24px] xl:text-[18px]'>اعــرف المزيــد</h3>
-                <FaArrowLeft className='lg:text-[24px] xl:text-[18px]' />
+                <Link to="/Program" className="flex items-center justify-between w-full">
+                  <h3 className='lg:text-[24px] xl:text-[18px]'>اعــرف المزيــد</h3>
+                  <FaArrowLeft className='lg:text-[24px] xl:text-[18px]' />
+                </Link>
              </div>
 
         </div>

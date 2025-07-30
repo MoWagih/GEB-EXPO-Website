@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { FaXTwitter } from 'react-icons/fa6'
-import { HiOutlineMenuAlt2 } from 'react-icons/hi'
-import { RiCloseLargeFill } from 'react-icons/ri'
-import { SiInstagram, SiLinkedin } from 'react-icons/si'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { FaXTwitter } from "react-icons/fa6";
+import { HiOutlineMenuAlt2 } from "react-icons/hi";
+import { RiCloseLargeFill } from "react-icons/ri";
+import { SiInstagram, SiLinkedin } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [toglleNav, setToglleNav] = useState(false);
@@ -18,15 +19,23 @@ export default function Navbar() {
       }
     };
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const linkVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.1, duration: 0.4 }
+    })
+  };
 
   return (
     <div>
       {/* Logo and Menu Bar */}
       <div
-        className={`flex items-center justify-between p-3 xl:p-0 xl:ps-4 xl"pe-4 z-100 lg:ps-6 lg:pe-6 fixed top-0 w-full transition-all duration-500 ${
+        className={`flex items-center justify-between p-3 xl:p-0 xl:ps-4 lg:ps-6 lg:pe-6 fixed top-0 w-full z-100 transition-all duration-500 ${
           isScrolled ? "bg-[#0f6340ee] shadow-lg" : "bg-transparent"
         }`}
       >
@@ -36,24 +45,32 @@ export default function Navbar() {
           alt="GEB-EXPO Logo"
         />
 
-        {/* Main Links and Actions */}
         <div className="hidden xl:flex items-center justify-evenly w-[70%] font-medium">
-          {/* Main Links */}
-          <div
-            className={`flex items-center gap-9 ${
-              isScrolled ? "text-white" : "text-white"
-            }`}
-          >
-            <Link to="/">الصفحة الرئيسية</Link>
-            <Link to="/Program">البرنامج</Link>
-            <Link to="/Services">الخدمات</Link>
-            <Link to="/About">عن المعرض</Link>
-            <Link to="/Media">الإعلام</Link>
-            <Link to="/Contact">تواصل معنا</Link>
+          <div className="flex items-center gap-9 text-white">
+            {["الصفحة الرئيسية", "البرنامج", "الخدمات", "عن المعرض", "الإعلام", "تواصل معنا"].map(
+              (text, i) => (
+                <motion.div
+                  key={i}
+                  custom={i}
+                  variants={linkVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <Link to={text === "الصفحة الرئيسية" ? "/" : `/${text}`}>
+                    {text}
+                  </Link>
+                </motion.div>
+              )
+            )}
           </div>
 
           {/* Main Actions */}
-          <div className="flex items-center gap-9">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, duration: 0.4 }}
+            className="flex items-center gap-9"
+          >
             <Link
               className={`p-2 ps-6 pe-6 ${
                 isScrolled ? " bg-[#f88b598e] text-white" : "bg-white"
@@ -62,9 +79,10 @@ export default function Navbar() {
             >
               التسجيل
             </Link>
-          </div>
+          </motion.div>
         </div>
 
+        {/* Menu Icon for Mobile */}
         <HiOutlineMenuAlt2
           className={`text-[22px] xl:hidden lg:text-[28px] ${
             isScrolled ? "text-white" : "text-white"
@@ -75,10 +93,15 @@ export default function Navbar() {
         />
       </div>
 
-      {/* Mobile Nav Bar */}
       {toglleNav && (
-        <div className="bg-blue-900 z-200 h-[100vh] w-[100%] p-3 absolute top-0 text-white transition-all duration-500">
-          {/* Logo and Closing Button */}
+        <motion.div
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "100%" }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+          className="bg-[#000000f8] z-200 h-[100vh] w-[100%] p-3 fixed top-0 text-white"
+        >
+          {/* Logo and Close */}
           <div className="flex items-center justify-between">
             <img
               className="w-[35%] sm:w-[20%] md:w-[15%] lg:w-[12%]"
@@ -86,31 +109,45 @@ export default function Navbar() {
               alt="GEB-EXPO Logo"
             />
             <RiCloseLargeFill
-              onClick={() => {
-                setToglleNav(false);
-              }}
+              onClick={() => setToglleNav(false)}
               className="text-[22px] text-white"
             />
           </div>
 
-          {/* Links */}
           <div className="flex flex-col font-medium gap-4 pt-10 pb-10">
-            <Link to="/Home">الصفحة الرئيسية</Link>
-            <Link to="/About">عن المعرض</Link>
-            <Link to="/Program">البرنامج</Link>
-            <Link to="/Exhibitors">العارضون</Link>
-            <Link to="/Media">الإعلام</Link>
-            <Link to="/Register">التسجيل</Link>
-            <Link to="/Contact">التواصل</Link>
+            {["الصفحة الرئيسية", "البرنامج", "الخدمات", "عن المعرض", "الإعلام", "تواصل معنا"].map(
+              (text, i) => (
+                <motion.div
+                  key={i}
+                  custom={i}
+                  variants={linkVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <Link
+                    className="hover:text-green-300 transition hover:text-[18px]"
+                    to={text === "الصفحة الرئيسية" ? "/" : `/${text}`}
+                    onClick={() => setToglleNav(false)}
+                  >
+                    {text}
+                  </Link>
+                </motion.div>
+              )
+            )}
           </div>
 
-          {/* Social Media Links */}
-          <div className="p-3 border-t-[1px] border-white flex items-center gap-4">
+          {/* Social Media */}
+          <motion.div
+            className="p-3 border-t-[1px] text-[18px] border-white flex items-center justify-center gap-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
             <SiInstagram />
             <SiLinkedin />
             <FaXTwitter />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </div>
   );

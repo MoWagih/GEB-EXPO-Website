@@ -1,17 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-import HeroImg from "../assets/imgs/expo4.png"
+import HeroImg from "../assets/imgs/expo4.png";
 import Footer from "../Components/Footer";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col items-center justify-center">
-
       <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] pt-[80px] lg:pt-[100px]">
         <img
-          src={HeroImg} 
+          src={HeroImg}
           alt="تواصل معنا"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -20,7 +19,8 @@ export default function ContactPage() {
             تواصل معنا
           </h1>
           <p className="text-sm sm:text-base lg:text-lg text-gray-200 max-w-2xl leading-relaxed">
-            نحن هنا للإجابة على كل استفساراتك — تواصل معنا عبر النموذج أو من خلال وسائل التواصل الاجتماعي.
+            نحن هنا للإجابة على كل استفساراتك — تواصل معنا عبر النموذج أو من
+            خلال وسائل التواصل الاجتماعي.
           </p>
         </div>
       </div>
@@ -68,7 +68,9 @@ export default function ContactPage() {
           </h3>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="text-white text-sm">الاسم</label>
+            <label htmlFor="name" className="text-white text-sm">
+              الاسم
+            </label>
             <input
               id="name"
               type="text"
@@ -78,7 +80,9 @@ export default function ContactPage() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-white text-sm">البريد الإلكتروني</label>
+            <label htmlFor="email" className="text-white text-sm">
+              البريد الإلكتروني
+            </label>
             <input
               id="email"
               type="email"
@@ -88,7 +92,9 @@ export default function ContactPage() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="message" className="text-white text-sm">الرسالة</label>
+            <label htmlFor="message" className="text-white text-sm">
+              الرسالة
+            </label>
             <textarea
               id="message"
               rows="5"
