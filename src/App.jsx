@@ -30,14 +30,14 @@ export default function App() {
   return (
     <div>
       {/* Cursor */}
-      <AnimatedCursor
+      {/* <AnimatedCursor
         innerSize={8}
         outerSize={35}
         color="255, 122, 0" 
         outerAlpha={0.3}
         innerScale={1}
         outerScale={2}
-      />
+      /> */}
       
       {/* Static Nav-bar */}
       <Navbar />
