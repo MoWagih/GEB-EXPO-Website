@@ -13,8 +13,8 @@ i18n
       ar: { translation: translationAR },
       en: { translation: translationEN },
     },
-    lng: "ar",            // ✅ اللغة الافتراضية
-    fallbackLng: "ar",    // لو مفيش ترجمة يرجع للعربي
+    lng: "ar",            
+    fallbackLng: "ar",   
     interpolation: { escapeValue: false },
   });
 
