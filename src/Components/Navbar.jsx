@@ -5,10 +5,18 @@ import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { SiInstagram, SiLinkedin } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [toglleNav, setToglleNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    document.body.dir = lang === "ar" ? "rtl" : "ltr";
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,13 +35,21 @@ export default function Navbar() {
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.1, duration: 0.4 }
-    })
+      transition: { delay: i * 0.1, duration: 0.4 },
+    }),
   };
+
+  const navLinks = [
+    { key: "home", path: "/" },
+    { key: "program", path: "/Program" },
+    { key: "services", path: "/Services" },
+    { key: "about", path: "/About" },
+    { key: "media", path: "/Media" },
+    { key: "contact", path: "/Contact" },
+  ];
 
   return (
     <div>
-      {/* Logo and Menu Bar */}
       <div
         className={`flex items-center justify-between p-3 xl:p-0 xl:ps-4 lg:ps-6 lg:pe-6 fixed top-0 w-full z-100 transition-all duration-500 ${
           isScrolled ? "bg-[#0f6340ee] shadow-lg" : "bg-transparent"
@@ -47,24 +63,19 @@ export default function Navbar() {
 
         <div className="hidden xl:flex items-center justify-evenly w-[70%] font-medium">
           <div className="flex items-center gap-9 text-white">
-            {["الصفحة الرئيسية", "البرنامج", "الخدمات", "عن المعرض", "الإعلام", "تواصل معنا"].map(
-              (text, i) => (
-                <motion.div
-                  key={i}
-                  custom={i}
-                  variants={linkVariants}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  <Link to={text === "الصفحة الرئيسية" ? "/" : `/${text}`}>
-                    {text}
-                  </Link>
-                </motion.div>
-              )
-            )}
+            {navLinks.map((link, i) => (
+              <motion.div
+                key={i}
+                custom={i}
+                variants={linkVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <Link to={link.path}>{t(link.key)}</Link>
+              </motion.div>
+            ))}
           </div>
 
-          {/* Main Actions */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -77,12 +88,26 @@ export default function Navbar() {
               }`}
               to="/Register"
             >
-              التسجيل
+              {t("register")}
             </Link>
           </motion.div>
+
+          {/* <div className="flex items-center gap-2 ps-6">
+            <button
+              onClick={() => changeLanguage("ar")}
+              className="px-2 py-1 hover:text-green-300"
+            >
+              عربي
+            </button>
+            <button
+              onClick={() => changeLanguage("en")}
+              className="px-2 py-1 hover:text-green-300"
+            >
+              English
+            </button>
+          </div> */}
         </div>
 
-        {/* Menu Icon for Mobile */}
         <HiOutlineMenuAlt2
           className={`text-[22px] xl:hidden lg:text-[28px] ${
             isScrolled ? "text-white" : "text-white"
@@ -110,33 +135,30 @@ export default function Navbar() {
             />
             <RiCloseLargeFill
               onClick={() => setToglleNav(false)}
-              className="text-[22px] text-white"
+              className="text-[22px] text-white cursor-pointer"
             />
           </div>
 
           <div className="flex flex-col font-medium gap-4 pt-10 pb-10">
-            {["الصفحة الرئيسية", "البرنامج", "الخدمات", "عن المعرض", "الإعلام", "تواصل معنا"].map(
-              (text, i) => (
-                <motion.div
-                  key={i}
-                  custom={i}
-                  variants={linkVariants}
-                  initial="hidden"
-                  animate="visible"
+            {navLinks.map((link, i) => (
+              <motion.div
+                key={i}
+                custom={i}
+                variants={linkVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <Link
+                  className="hover:text-green-300 transition hover:text-[18px]"
+                  to={link.path}
+                  onClick={() => setToglleNav(false)}
                 >
-                  <Link
-                    className="hover:text-green-300 transition hover:text-[18px]"
-                    to={text === "الصفحة الرئيسية" ? "/" : `/${text}`}
-                    onClick={() => setToglleNav(false)}
-                  >
-                    {text}
-                  </Link>
-                </motion.div>
-              )
-            )}
+                  {t(link.key)}
+                </Link>
+              </motion.div>
+            ))}
           </div>
 
-          {/* Social Media */}
           <motion.div
             className="p-3 border-t-[1px] text-[18px] border-white flex items-center justify-center gap-6"
             initial={{ opacity: 0, y: 20 }}
@@ -147,6 +169,21 @@ export default function Navbar() {
             <SiLinkedin />
             <FaXTwitter />
           </motion.div>
+
+          {/* <div className="flex items-center justify-center gap-3 mt-4">
+            <button
+              onClick={() => changeLanguage("ar")}
+              className="px-3 py-1 bg-green-600 rounded hover:bg-green-500"
+            >
+              عربي
+            </button>
+            <button
+              onClick={() => changeLanguage("en")}
+              className="px-3 py-1 bg-gray-700 rounded hover:bg-gray-600"
+            >
+              English
+            </button>
+          </div> */}
         </motion.div>
       )}
     </div>

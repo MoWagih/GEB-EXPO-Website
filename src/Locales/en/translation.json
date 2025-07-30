@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "home": "Home",
+    "program": "Program",
+    "services": "Services",
+    "about": "About Expo",
+    "media": "Media",
+    "contact": "Contact Us",
+    "register": "Register"
+  },
+
+  "hero": {
+    "title": "The Largest Educational Expo in the Region"
+  },
+
+  "register_section": {
+    "title": "Register for the Expo",
+    "subtitle": "Choose your registration type and fill out the form below to participate in GEB Expo 2025.",
+    "visitor": "Register as Visitor",
+    "exhibitor": "Register as Exhibitor",
+    "visitor_form": "Visitor Registration Form",
+    "exhibitor_form": "Exhibitor Registration Form"
+  },
+
+  "form": {
+    "full_name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "job": "Job / Organization",
+    "org_name": "Organization Name",
+    "responsible_name": "Responsible Person",
+    "participation_details": "Participation Details",
+    "submit": "Submit"
+  }
+}

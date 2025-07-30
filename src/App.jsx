@@ -44,12 +44,12 @@ export default function App() {
       <Routes>
         <Route>
           <Route path='/' element={<Home />} />
-          <Route path='/عن المعرض' element={<AboutPage />} />
-          <Route path='/البرنامج' element={<ProgramPage />} />
-          <Route path='/الخدمات' element={<ServicesPage />} />
-          <Route path='/الإعلام' element={<MediaPage />} />
+          <Route path='/About' element={<AboutPage />} />
+          <Route path='/Program' element={<ProgramPage />} />
+          <Route path='/Services' element={<ServicesPage />} />
+          <Route path='/Media' element={<MediaPage />} />
           <Route path='/Register' element={<RegisterPage />} />
-          <Route path='/تواصل معنا' element={<ContactPage />} />
+          <Route path='/Contact' element={<ContactPage />} />
         </Route>
       </Routes>
     </div>
