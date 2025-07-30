@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Logo from '../assets/imgs/Logo.png'
 import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
@@ -33,12 +34,12 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { key: "home", path: "/" },
-    { key: "program", path: "/Program" },
-    { key: "services", path: "/Services" },
-    { key: "about", path: "/About" },
-    { key: "media", path: "/Media" },
-    { key: "contact", path: "/Contact" },
+    { key: "الصفحة الرئيسية", path: "/" },
+    { key: "البرنامج", path: "/Program" },
+    { key: "الخدمات", path: "/Services" },
+    { key: "عن المعرض", path: "/About" },
+    { key: "الإعلام", path: "/Media" },
+    { key: "التواصل", path: "/Contact" },
   ];
 
   return (
@@ -50,7 +51,7 @@ export default function Navbar() {
       >
         <img
           className="w-[35%] sm:w-[20%] md:w-[15%] lg:w-[16%]"
-          src="../../public/Logo.png"
+          src={Logo}
           alt="GEB-EXPO Logo"
         />
 
@@ -81,7 +82,7 @@ export default function Navbar() {
               }`}
               to="/Register"
             >
-              {("register")}
+              {("التسجيل")}
             </Link>
           </motion.div>
 
@@ -123,7 +124,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <img
               className="w-[35%] sm:w-[20%] md:w-[15%] lg:w-[12%]"
-              src="../../public/Logo.png"
+              src={Logo}
               alt="GEB-EXPO Logo"
             />
             <RiCloseLargeFill
@@ -146,7 +147,7 @@ export default function Navbar() {
                   to={link.path}
                   onClick={() => setToglleNav(false)}
                 >
-                  {t(link.key)}
+                  {(link.key)}
                 </Link>
               </motion.div>
             ))}
