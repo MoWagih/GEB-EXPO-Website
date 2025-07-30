@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './Components/Navbar'
-import "./i18n";
-import { useTranslation } from 'react-i18next';
 import Home from './Pages/Home';
 import ProgramPage from './Pages/ProgramPage';
 import ServicesPage from './Pages/ServicesPage';
@@ -15,12 +13,6 @@ import MediaPage from './Pages/MediaPage';
 
 export default function App() {
  
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-    document.body.dir = lang === "ar" ? "rtl" : "ltr"; // لضبط الاتجاه
-  };
 
   useEffect(() => {
     document.body.dir = "rtl"; 

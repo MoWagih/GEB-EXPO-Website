@@ -5,18 +5,11 @@ import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { SiInstagram, SiLinkedin } from "react-icons/si";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [toglleNav, setToglleNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-    document.body.dir = lang === "ar" ? "rtl" : "ltr";
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,7 +64,7 @@ export default function Navbar() {
                 initial="hidden"
                 animate="visible"
               >
-                <Link to={link.path}>{t(link.key)}</Link>
+                <Link to={link.path}>{(link.key)}</Link>
               </motion.div>
             ))}
           </div>
@@ -88,7 +81,7 @@ export default function Navbar() {
               }`}
               to="/Register"
             >
-              {t("register")}
+              {("register")}
             </Link>
           </motion.div>
 
