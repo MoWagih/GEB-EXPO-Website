@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 export default function Counter() {
     
     const highlights = [
-        { number: 50, suffix: "+", label: "جامعــة " },
+        { number: 100, suffix: "+", label: "مشـــارك " },
         { number: 10, suffix: "", label: "دول مشاركـــة" },
         { number: 4000, suffix: "+", label: "زائــر متوقـــع يوميـــاً" },
         { number: 3, suffix: "", label: "أيام من الفعاليات" }

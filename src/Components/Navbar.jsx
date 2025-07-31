@@ -86,20 +86,6 @@ export default function Navbar() {
             </Link>
           </motion.div>
 
-          {/* <div className="flex items-center gap-2 ps-6">
-            <button
-              onClick={() => changeLanguage("ar")}
-              className="px-2 py-1 hover:text-green-300"
-            >
-              عربي
-            </button>
-            <button
-              onClick={() => changeLanguage("en")}
-              className="px-2 py-1 hover:text-green-300"
-            >
-              English
-            </button>
-          </div> */}
         </div>
 
         <HiOutlineMenuAlt2

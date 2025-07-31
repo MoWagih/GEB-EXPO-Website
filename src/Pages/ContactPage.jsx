@@ -1,32 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import HeroImg from "../assets/imgs/expo4.png";
 import Footer from "../Components/Footer";
-import { FaXTwitter } from "react-icons/fa6";
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] pt-[80px] lg:pt-[100px]">
+    <div className="flex flex-col items-center justify-center gap-12 sm:gap-16 lg:gap-20">
+
+      <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] xl:h-[80vh] pt-[80px] lg:pt-[100px]">
         <img
           src={HeroImg}
           alt="تواصل معنا"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#000000d3] flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4">
             تواصل معنا
           </h1>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-200 max-w-2xl leading-relaxed">
-            نحن هنا للإجابة على كل استفساراتك — تواصل معنا عبر النموذج أو من
-            خلال وسائل التواصل الاجتماعي.
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-200 max-w-2xl leading-relaxed">
+            نحن هنا للإجابة على كل استفساراتك — تواصل معنا عبر النموذج أو من خلال وسائل التواصل الاجتماعي.
           </p>
         </div>
       </div>
 
       <motion.section
-        className="flex flex-col items-center py-12 gap-6"
+        className="flex flex-col items-center gap-6"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -35,7 +35,7 @@ export default function ContactPage() {
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-green-500">
           تابعنا على وسائل التواصل
         </h2>
-        <div className="flex gap-6 text-white text-3xl">
+        <div className="flex gap-6">
           {[
             { icon: <FaInstagram />, link: "https://instagram.com" },
             { icon: <FaLinkedin />, link: "https://linkedin.com" },
@@ -46,8 +46,8 @@ export default function ContactPage() {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-500 transition transform hover:scale-110"
-              whileHover={{ scale: 1.2 }}
+              className="w-14 h-14 flex items-center justify-center bg-[#ffffff20] rounded-full text-2xl text-white hover:text-green-400 transition"
+              whileHover={{ scale: 1.15 }}
             >
               {item.icon}
             </motion.a>
@@ -60,18 +60,19 @@ export default function ContactPage() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.7 }}
       >
-        <form className="bg-[#00000059] w-full max-w-2xl p-8 shadow-2xl flex flex-col gap-4">
-          <h3 className="text-2xl text-green-500 font-semibold text-center mb-2">
+        <form className="bg-[#00000059] w-full max-w-2xl p-8 shadow-2xl flex flex-col gap-5 backdrop-blur-md">
+          <h3 className="text-2xl sm:text-3xl font-semibold text-green-500 text-center">
             ارسل لنا رسالة
           </h3>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="text-white text-sm">
+            <label htmlFor="name" className="text-white text-sm sm:text-base">
               الاسم
             </label>
             <input
+              required
               id="name"
               type="text"
               placeholder="اكتب اسمك هنا"
@@ -80,10 +81,11 @@ export default function ContactPage() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-white text-sm">
+            <label htmlFor="email" className="text-white text-sm sm:text-base">
               البريد الإلكتروني
             </label>
             <input
+              required
               id="email"
               type="email"
               placeholder="example@email.com"
@@ -92,10 +94,11 @@ export default function ContactPage() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="message" className="text-white text-sm">
+            <label htmlFor="message" className="text-white text-sm sm:text-base">
               الرسالة
             </label>
             <textarea
+              required
               id="message"
               rows="5"
               placeholder="اكتب رسالتك هنا..."
@@ -105,7 +108,7 @@ export default function ContactPage() {
 
           <motion.button
             type="submit"
-            className="mt-4 p-3 bg-green-600 text-white font-semibold hover:bg-green-700 transition"
+            className="mt-2 p-3 bg-green-600 text-white text-lg font-semibold hover:bg-green-700 transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

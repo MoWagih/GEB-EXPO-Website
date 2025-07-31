@@ -8,12 +8,15 @@ import {
   FaLightbulb,
 } from "react-icons/fa";
 import HeroImg from "../assets/imgs/expo3.png";
+import Carezma from "../assets/imgs/carezma logo.png";
+import Riep from "../assets/imgs/RIEP.png";
 import Footer from "../Components/Footer";
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] pt-[80px] lg:pt-[100px]">
+      
+      <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] xl:h-[80vh] pt-[80px] lg:pt-[100px]">
         <img
           src={HeroImg}
           alt="عن المعرض"
@@ -31,7 +34,7 @@ export default function AboutPage() {
       </div>
 
       <motion.section
-        className="max-w-4xl text-center py-12 px-4"
+        className="w-full max-w-5xl text-center py-12 px-6 sm:px-8 lg:px-12"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -49,7 +52,7 @@ export default function AboutPage() {
       </motion.section>
 
       <motion.section
-        className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl px-6 py-12"
+        className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 px-6 sm:px-8 lg:px-12 py-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -74,23 +77,21 @@ export default function AboutPage() {
         ].map((item, index) => (
           <motion.div
             key={index}
-            className="bg-[#00000059] p-6 text-center shadow-lg hover:shadow-xl transition"
+            className="bg-[#00000059] p-6 hover:border-1 hover:border-[#f5f5f5] text-center shadow-lg hover:shadow-xl transition"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             {item.icon}
-            <h3 className="text-xl font-semibold text-green-500">
-              {item.title}
-            </h3>
+            <h3 className="text-xl font-semibold text-green-500">{item.title}</h3>
             <p className="text-sm sm:text-base text-gray-100">{item.text}</p>
           </motion.div>
         ))}
       </motion.section>
 
       <motion.section
-        className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl px-6 py-12"
+        className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 sm:px-8 lg:px-12 py-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -110,37 +111,69 @@ export default function AboutPage() {
         ].map((card, index) => (
           <motion.div
             key={index}
-            className="bg-[#00000059] p-6 text-center shadow-lg hover:shadow-xl transition"
+            className="bg-[#00000059] p-6 hover:border-1 hover:border-[#f5f5f5] text-center shadow-lg hover:shadow-xl transition"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             {card.icon}
-            <h3 className="text-2xl font-semibold text-green-500 mb-2">
-              {card.title}
-            </h3>
+            <h3 className="text-2xl font-semibold text-green-500 mb-2">{card.title}</h3>
             <p className="text-sm sm:text-base text-gray-100">{card.text}</p>
           </motion.div>
         ))}
       </motion.section>
 
       <motion.section
-        className="w-full flex justify-center px-4 pb-16"
+        className="w-full flex justify-center px-6 sm:px-8 lg:px-12 pb-16"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
       >
-        <div className="bg-[#00000059] max-w-5xl text-center shadow-2xl p-8 backdrop-blur-sm">
+        <div className="bg-[#00000059] max-w-5xl w-full text-center shadow-2xl p-8 hover:border-1 hover:border-[#f5f5f5] backdrop-blur-sm">
           <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-100">
-            تعتبر المملكة العربية السعودية من افضل الدول المضيفة للمعارض
-            التعليمية لعدة عوامل منها البنية التحتية المتطورة واهتمام المملكة
-            بالتعليم حيث تعتبر المعارض جزءا أساسيا من جهودها لتعزيز جودة التعليم
-            إضافة للموقع الجغرافي الاستراتيجي المتميز مما يجعلها وجهة سهلة
-            للوصول إليها من كافة بقاع الأرض وتتميز كذلك بارتفاع الطلب علي
-            التعليم.
+            تعتبر المملكة العربية السعودية من افضل الدول المضيفة للمعارض التعليمية
+            لعدة عوامل منها البنية التحتية المتطورة واهتمام المملكة بالتعليم حيث تعتبر
+            المعارض جزءا أساسيا من جهودها لتعزيز جودة التعليم إضافة للموقع الجغرافي
+            الاستراتيجي المتميز مما يجعلها وجهة سهلة للوصول إليها من كافة بقاع الأرض
+            وتتميز كذلك بارتفاع الطلب علي التعليم.
           </p>
+        </div>
+      </motion.section>
+
+      <motion.section
+        className="w-full flex flex-col items-center px-6 sm:px-8 lg:px-12 pb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
+        <div className="bg-[#00000059] max-w-5xl w-full text-center shadow-2xl p-8 hover:border-1 hover:border-[#f5f5f5] backdrop-blur-sm">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-green-400 mb-4">
+            منظم المعرض
+          </h2>
+          <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-100 mb-6">
+            تـنظيم الـمعرض من خلال
+            <span className="text-green-400 font-semibold"> GEB Expo 2025 </span>
+            بواسطة شركة
+            <span className="text-green-400 font-semibold"> كاريزمــا </span>
+            وشركة
+            <span className="text-green-400 font-semibold"> الابتكــار </span>
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-10 mt-6">
+            <img
+              src={Carezma}
+              alt="Carezma Logo"
+              className="h-24 sm:h-32 lg:h-36 object-contain"
+            />
+            <img
+              src={Riep}
+              alt="RIEP Logo"
+              className="h-24 sm:h-32 lg:h-36 object-contain"
+            />
+          </div>
         </div>
       </motion.section>
 

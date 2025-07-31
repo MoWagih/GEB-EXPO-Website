@@ -13,14 +13,17 @@ import Program from '../Sections/Program'
 
 export default function Home() {
   return (
-    <div className='p-2 xl:p-0 sm:p-12 flex flex-col justify-center gap-12 md:gap-22 sm:pt-4 md:pt-2 sm:gap-22 lg:pt-[77px] xl:pt-[30px] xl:justify-start xl:items-start xl:gap-22'>
-        {/* Hero Section */}
-        <HeroSection />
-        {/* King Salman  */}
+    <div className='flex flex-col justify-center items-center w-full'>
+      <HeroSection />
+
+      <div className="w-full flex flex-col items-center px-4 sm:px-6 lg:px-12 xl:px-20 gap-16 sm:gap-20 lg:gap-24 py-12">
+
+        {/* King Salman */}
         <KingSalmanWord />
 
-        {/* Prince Mohammed bn Salman */}
+        {/* Prince Mohammed bin Salman */}
         <PrinceMohamed />
+
         {/* Brief */}
         <Brief />
 
@@ -39,12 +42,11 @@ export default function Home() {
         {/* Gallery */}
         <Gallery />
 
-
         {/* Exhibitors & Partners */}
         <Partners />
+      </div>
 
-        {/* Footer */}
-        <Footer />
+      <Footer />
     </div>
   )
 }
