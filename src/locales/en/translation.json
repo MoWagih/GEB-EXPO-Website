@@ -31,8 +31,8 @@
     "image_alt": "Prince Mohammed bin Salman"
   },
   "brief": {
-    "title_line1": "About",
-    "title_line2": "the",
+    "title_line1": "About the",
+    "title_line2": "",
     "title_line3": "Exhibition",
     "description": "The exhibition will be held from 16–18 November at the conference hall of the Marriott Hotel in Riyadh, hosting numerous prestigious local and international universities and educational institutions, along with our ambitious students who are the generation of the future."
   },
@@ -66,8 +66,8 @@
   },
   "program": {
     "title_line1": "Overview",
-    "title_line2": "of",
-    "title_line3": "the Program",
+    "title_line2": "of the",
+    "title_line3": "Program",
     "description": "GEB Expo offers a diverse program of events over three days, including interactive workshops, discussion sessions with education experts, and distinguished presentations from participating universities.",
     "cta": "Learn More"
   },
