@@ -2,7 +2,7 @@ import { FaInstagram, FaLinkedin, FaTwitter, FaFacebookF } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next';
 import Logo from '../../public/Logo.png';
 import Carezma from '../assets/imgs/carezma logo.png';
-import Riep from '../assets/imgs/Riep.png';
+import Riep from '../assets/imgs/RIEP.png';
 
 export default function Footer() {
   const { t, i18n } = useTranslation();
