@@ -1,46 +1,47 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
-import img1 from "../assets/imgs/وزارة التخطيط والاقتصاد.png";
-import img2 from "../assets/imgs/وزارة الطاقة.png";
-import img3 from "../assets/imgs/وزارة المالية.png";
-import img4 from "../assets/imgs/Ministry_of_Communications_and_Information_Technology_.png";
-import img5 from "../assets/imgs/Ministry-of-Interior.png";
-import img6 from "../assets/imgs/Minisrty-of-Education-01-1-1.png";
-import img7 from "../assets/imgs/Ministry-of-Foreign-Affairs-01.png";
-import img8 from "../assets/imgs/Ministry-of-Environment-Water-and-Agriculture-01.png";
-import img9 from "../assets/imgs/Ministry of Municipalities & Housing.png";
-import img10 from "../assets/imgs/Ministry-of-Culture.png";
-import img11 from "../assets/imgs/Aramco-01.png";
-import img12 from "../assets/imgs/Capital-Market-Authority-01.png";
-import img13 from "../assets/imgs/SDAIA-1.png";
-import img14 from "../assets/imgs/EasternEamana.png";
-import img15 from "../assets/imgs/الملكية الفكرية.png";
-import img16 from "../assets/imgs/Ministry of Tourism.png";
-import img17 from "../assets/imgs/أمانة-الرياض-1536x414.png";
-import img18 from "../assets/imgs/القوات الخاصة للامن البيئي.jpg";
-import img19 from "../assets/imgs/monshaat-01.png";
-import img20 from "../assets/imgs/الهيئة_الملكية_لمكة_المكرمة_والمشاعر_المقدسة.jpg";
-import img21 from "../assets/imgs/king abdulaziz royal reserve development authority.png";
-import img22 from "../assets/imgs/General Entertainment Authority-01.png";
-import img23 from "../assets/imgs/محمية الامير محمد بن سلمان.png";
-import img24 from "../assets/imgs/محمية الملك سلمان.png";
-import img25 from "../assets/imgs/STC-01.svg.png";
-import img26 from "../assets/imgs/Geely_logo.svg.png";
-import img27 from "../assets/imgs/global-experience-specialists-1200px-logo.png";
-import img28 from "../assets/imgs/RC-Logo-.png";
-import img29 from "../assets/imgs/dmg-events.jpeg";
-import img30 from "../assets/imgs/الراجحي.png";
-import img31 from "../assets/imgs/Society_Saudi-Arabia_RGB.png";
-import img32 from "../assets/imgs/تحالف.jpg";
-import img33 from "../assets/imgs/صندوق التنية السياحي.jpg";
-import img34 from "../assets/imgs/مقصفي.png";
-import img35 from "../assets/imgs/informa_cityscape_master_logo_rgb.png";
-import img36 from "../assets/imgs/kidana-logo-gold-06.png";
-import img37 from "../assets/imgs/informa-logo.png";
-import img38 from "../assets/imgs/JAPAN-HEALTH-COLOUR-1.png";
-import img39 from "../assets/imgs/blackhat.png";
-import img40 from "../assets/imgs/الاتحاد السعودي للامن السيبراني.png";
+import img1 from '../assets/imgs/وزارة التخطيط والاقتصاد.png';
+import img2 from '../assets/imgs/وزارة الطاقة.png';
+import img3 from '../assets/imgs/وزارة المالية.png';
+import img4 from '../assets/imgs/Ministry_of_Communications_and_Information_Technology_.png';
+import img5 from '../assets/imgs/Ministry-of-Interior.png';
+import img6 from '../assets/imgs/Minisrty-of-Education-01-1-1.png';
+import img7 from '../assets/imgs/Ministry-of-Foreign-Affairs-01.png';
+import img8 from '../assets/imgs/Ministry-of-Environment-Water-and-Agriculture-01.png';
+import img9 from '../assets/imgs/Ministry of Municipalities & Housing.png';
+import img10 from '../assets/imgs/Ministry-of-Culture.png';
+import img11 from '../assets/imgs/Aramco-01.png';
+import img12 from '../assets/imgs/Capital-Market-Authority-01.png';
+import img13 from '../assets/imgs/SDAIA-1.png';
+import img14 from '../assets/imgs/EasternEamana.png';
+import img15 from '../assets/imgs/الملكية الفكرية.png';
+import img16 from '../assets/imgs/Ministry of Tourism.png';
+import img17 from '../assets/imgs/أمانة-الرياض-1536x414.png';
+import img18 from '../assets/imgs/القوات الخاصة للامن البيئي.jpg';
+import img19 from '../assets/imgs/monshaat-01.png';
+import img20 from '../assets/imgs/الهيئة_الملكية_لمكة_المكرمة_والمشاعر_المقدسة.jpg';
+import img21 from '../assets/imgs/king abdulaziz royal reserve development authority.png';
+import img22 from '../assets/imgs/General Entertainment Authority-01.png';
+import img23 from '../assets/imgs/محمية الامير محمد بن سلمان.png';
+import img24 from '../assets/imgs/محمية الملك سلمان.png';
+import img25 from '../assets/imgs/STC-01.svg.png';
+import img26 from '../assets/imgs/Geely_logo.svg.png';
+import img27 from '../assets/imgs/global-experience-specialists-1200px-logo.png';
+import img28 from '../assets/imgs/RC-Logo-.png';
+import img29 from '../assets/imgs/dmg-events.jpeg';
+import img30 from '../assets/imgs/الراجحي.png';
+import img31 from '../assets/imgs/Society_Saudi-Arabia_RGB.png';
+import img32 from '../assets/imgs/تحالف.jpg';
+import img33 from '../assets/imgs/صندوق التنية السياحي.jpg';
+import img34 from '../assets/imgs/مقصفي.png';
+import img35 from '../assets/imgs/informa_cityscape_master_logo_rgb.png';
+import img36 from '../assets/imgs/kidana-logo-gold-06.png';
+import img37 from '../assets/imgs/informa-logo.png';
+import img38 from '../assets/imgs/JAPAN-HEALTH-COLOUR-1.png';
+import img39 from '../assets/imgs/blackhat.png';
+import img40 from '../assets/imgs/الاتحاد السعودي للامن السيبراني.png';
 
 const logos = [
   img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
@@ -49,7 +50,51 @@ const logos = [
   img31, img32, img33, img34, img35, img36, img37, img38, img39, img40
 ];
 
-export default function PartnersCarousel() {
+const logoAlts = [
+  'ministry_of_planning_and_economy',
+  'ministry_of_energy',
+  'ministry_of_finance',
+  'ministry_of_communications_and_information_technology',
+  'ministry_of_interior',
+  'ministry_of_education',
+  'ministry_of_foreign_affairs',
+  'ministry_of_environment_water_and_agriculture',
+  'ministry_of_municipalities_and_housing',
+  'ministry_of_culture',
+  'aramco',
+  'capital_market_authority',
+  'sdaia',
+  'eastern_eamana',
+  'intellectual_property',
+  'ministry_of_tourism',
+  'riyadh_municipality',
+  'special_forces_for_environmental_security',
+  'monshaat',
+  'royal_commission_for_makkah_and_holy_sites',
+  'king_abdulaziz_royal_reserve',
+  'general_entertainment_authority',
+  'prince_mohammed_bin_salman_reserve',
+  'king_salman_reserve',
+  'stc',
+  'geely',
+  'global_experience_specialists',
+  'rc_logo',
+  'dmg_events',
+  'al_rajhi',
+  'society_saudi_arabia',
+  'tahakom',
+  'tourism_development_fund',
+  'maqsafi',
+  'informa_cityscape',
+  'kidana',
+  'informa',
+  'japan_health',
+  'blackhat',
+  'saudi_federation_for_cybersecurity'
+];
+
+export default function Partners() {
+  const { t, i18n } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const chunkSize = 4;
@@ -66,9 +111,13 @@ export default function PartnersCarousel() {
   }, [slides.length]);
 
   return (
-    <section className="relative w-full py-16 px-4 sm:px-6 bg-[#ffffff]">
+    <section
+      className="relative w-full py-16 px-4 sm:px-6 bg-[#ffffff]"
+      dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
+      aria-label={t('partnersCarousel.section_label')}
+    >
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-10 text-center text-green-500">
-        شركاء النجاح
+        {t('partnersCarousel.title')}
         <span className="block w-20 h-[3px] bg-green-400 mt-4 mx-auto"></span>
       </h2>
 
@@ -89,8 +138,9 @@ export default function PartnersCarousel() {
               >
                 <img
                   src={logo}
-                  alt={`Partner Logo ${i}`}
+                  alt={t(`partnersCarousel.logo_alts.${logoAlts[i + currentSlide * chunkSize]}`)}
                   className="w-[80%]"
+                  loading="lazy"
                 />
               </div>
             ))}

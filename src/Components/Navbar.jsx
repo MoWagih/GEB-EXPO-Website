@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
-import Logo from '../assets/imgs/Logo.png'
+import Logo from "../assets/imgs/Logo.png";
 import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { SiInstagram, SiLinkedin } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
   const [toglleNav, setToglleNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,18 +35,18 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { key: "الصفحة الرئيسية", path: "/" },
-    { key: "البرنامج", path: "/Program" },
-    { key: "الخدمات", path: "/Services" },
-    { key: "عن المعرض", path: "/About" },
-    { key: "الإعلام", path: "/Media" },
-    { key: "التواصل", path: "/Contact" },
+    { key: "home", path: "/" },
+    { key: "program", path: "/Program" },
+    { key: "services", path: "/Services" },
+    { key: "about", path: "/About" },
+    { key: "media", path: "/Media" },
+    { key: "contact", path: "/Contact" },
   ];
 
   return (
-    <div>
+    <div dir={i18n.language === "ar" ? "rtl" : "ltr"} className="font-medium">
       <div
-        className={`flex items-center justify-between p-3 xl:p-0 xl:ps-4 lg:ps-6 lg:pe-6 fixed top-0 w-full z-100 transition-all duration-500 ${
+        className={`flex items-center justify-between p-3 xl:p-0 xl:ps-4 lg:ps-6 lg:pe-6 fixed top-0 w-full z-[100] transition-all duration-500 ${
           isScrolled ? "bg-[#0f6340ee] shadow-lg" : "bg-transparent"
         }`}
       >
@@ -53,9 +54,10 @@ export default function Navbar() {
           className="w-[35%] sm:w-[20%] md:w-[15%] lg:w-[16%]"
           src={Logo}
           alt="GEB-EXPO Logo"
+          loading="lazy"
         />
 
-        <div className="hidden xl:flex items-center justify-evenly w-[70%] font-medium">
+        <div className="hidden xl:flex items-center justify-evenly w-[70%]">
           <div className="flex items-center gap-9 text-white">
             {navLinks.map((link, i) => (
               <motion.div
@@ -65,7 +67,12 @@ export default function Navbar() {
                 initial="hidden"
                 animate="visible"
               >
-                <Link to={link.path}>{(link.key)}</Link>
+                <Link
+                  to={link.path}
+                  className="hover:text-green-300 transition-colors duration-200"
+                >
+                  {t(`navbar.${link.key}`)}
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -77,41 +84,55 @@ export default function Navbar() {
             className="flex items-center gap-9"
           >
             <Link
-              className={`p-2 ps-6 pe-6 ${
-                isScrolled ? " bg-[#f88b598e] text-white" : "bg-white"
-              }`}
+              className={`px-6 py-2 ${
+                isScrolled ? "bg-[#f88b598e] text-white" : "bg-white text-black"
+              } hover:bg-[#f88b59] transition-colors duration-200`}
               to="/Register"
             >
-              {("التسجيل")}
+              {t("navbar.register")}
             </Link>
+            
+            {/* Switch Language */}
+            <div className="flex items-center justify-center gap-3 mt-4">
+              {i18n.language === "en" ? (
+                <button
+                  onClick={() => i18n.changeLanguage("ar")}
+                  className="text-white text-sm sm:text-base p-2 transition-colors duration-200"
+                >
+                  {t("navbar.language_ar")}
+                </button>
+              ) : (
+                <button
+                  onClick={() => i18n.changeLanguage("en")}
+                  className="text-white text-sm sm:text-base transition-colors duration-200"
+                >
+                  {t("navbar.language_en")}
+                </button>
+              )}
+            </div>
           </motion.div>
-
         </div>
 
         <HiOutlineMenuAlt2
-          className={`text-[22px] xl:hidden lg:text-[28px] ${
-            isScrolled ? "text-white" : "text-white"
-          }`}
-          onClick={() => {
-            setToglleNav(true);
-          }}
+          className={`text-[22px] xl:hidden lg:text-[28px] text-white`}
+          onClick={() => setToglleNav(true)}
         />
       </div>
 
       {toglleNav && (
         <motion.div
-          initial={{ x: "100%" }}
+          initial={{ x: i18n.language === "ar" ? "-100%" : "100%" }}
           animate={{ x: 0 }}
-          exit={{ x: "100%" }}
+          exit={{ x: i18n.language === "ar" ? "-100%" : "100%" }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="bg-[#000000f8] z-200 h-[100vh] w-[100%] p-3 fixed top-0 text-white"
+          className="bg-[#000000f8] z-[200] h-screen w-full p-3 fixed top-0 text-white"
         >
-          {/* Logo and Close */}
           <div className="flex items-center justify-between">
             <img
               className="w-[35%] sm:w-[20%] md:w-[15%] lg:w-[12%]"
               src={Logo}
               alt="GEB-EXPO Logo"
+              loading="lazy"
             />
             <RiCloseLargeFill
               onClick={() => setToglleNav(false)}
@@ -119,7 +140,7 @@ export default function Navbar() {
             />
           </div>
 
-          <div className="flex flex-col font-medium gap-4 pt-10 pb-10">
+          <div className="flex flex-col gap-4 pt-10 pb-10">
             {navLinks.map((link, i) => (
               <motion.div
                 key={i}
@@ -129,41 +150,41 @@ export default function Navbar() {
                 animate="visible"
               >
                 <Link
-                  className="hover:text-green-300 transition hover:text-[18px]"
+                  className="text-[18px] hover:text-green-300 transition-all duration-200 hover:text-[20px]"
                   to={link.path}
                   onClick={() => setToglleNav(false)}
                 >
-                  {(link.key)}
+                  {t(`navbar.${link.key}`)}
                 </Link>
               </motion.div>
             ))}
           </div>
 
           <motion.div
-            className="p-3 border-t-[1px] text-[18px] border-white flex items-center justify-center gap-6"
+            className="p-3 border-t border-white flex items-center justify-center gap-6 text-[18px]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <SiInstagram />
-            <SiLinkedin />
-            <FaXTwitter />
+            <SiInstagram className="hover:text-green-300 transition-colors duration-200" />
+            <SiLinkedin className="hover:text-green-300 transition-colors duration-200" />
+            <FaXTwitter className="hover:text-green-300 transition-colors duration-200" />
           </motion.div>
 
-          {/* <div className="flex items-center justify-center gap-3 mt-4">
+          <div className="flex items-center justify-center gap-3 mt-4">
             <button
-              onClick={() => changeLanguage("ar")}
-              className="px-3 py-1 bg-green-600 rounded hover:bg-green-500"
+              onClick={() => i18n.changeLanguage("ar")}
+              className="px-3 py-1 bg-green-600 rounded hover:bg-green-500 text-white text-sm sm:text-base transition-colors duration-200"
             >
-              عربي
+              {t("navbar.language_ar")}
             </button>
             <button
-              onClick={() => changeLanguage("en")}
-              className="px-3 py-1 bg-gray-700 rounded hover:bg-gray-600"
+              onClick={() => i18n.changeLanguage("en")}
+              className="px-3 py-1 bg-gray-700 rounded hover:bg-gray-600 text-white text-sm sm:text-base transition-colors duration-200"
             >
-              English
+              {t("navbar.language_en")}
             </button>
-          </div> */}
+          </div>
         </motion.div>
       )}
     </div>

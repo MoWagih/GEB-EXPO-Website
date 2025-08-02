@@ -1,0 +1,299 @@
+{
+  "navbar": {
+    "home": "Home",
+    "program": "Program",
+    "services": "Services",
+    "about": "About",
+    "media": "Media",
+    "contact": "Contact",
+    "register": "Register",
+    "language_ar": "عربي",
+    "language_en": "English"
+  },
+  "hero": {
+    "title": "Discover Your Educational Future",
+    "subtitle": "With Top Global Universities",
+    "date": "16 - 18",
+    "month": "November 2025",
+    "location": "Riyadh - Marriott Hotel",
+    "register": "Register Your Attendance Now"
+  },
+  "kingSalman": {
+    "title": "The Word of the Custodian of the Two Holy Mosques, May God Protect Him",
+    "name": "King Salman bin Abdulaziz Al Saud",
+    "quote": "And that your country becomes a pioneer in investing in future technologies, so that these technologies, with God's help, become a new pillar for our national economy and the global economy",
+    "image_alt": "King Salman bin Abdulaziz"
+  },
+  "princeMohamed": {
+    "title": "The Word of the Crown Prince and Prime Minister",
+    "name": "Prince Mohammed bin Salman bin Abdulaziz Al Saud",
+    "quote": "Our greatest wealth, unmatched by any other, is an ambitious people, mostly youth, who are the pride of our nation and the guarantee of its future, with God's help",
+    "image_alt": "Prince Mohammed bin Salman"
+  },
+  "brief": {
+    "title_line1": "About",
+    "title_line2": "the",
+    "title_line3": "Exhibition",
+    "description": "The exhibition will be held from 16–18 November at the conference hall of the Marriott Hotel in Riyadh, hosting numerous prestigious local and international universities and educational institutions, along with our ambitious students who are the generation of the future."
+  },
+  "goals": {
+    "title_line1": "Goals",
+    "title_line2": "of the Exhibition",
+    "card1_title": "Introduction",
+    "card1_description": "A gathering for students and distinguished educational institutions",
+    "card2_title": "Providing",
+    "card2_description": "An opportunity to meet representatives from over 100 global universities",
+    "card3_title": "Finding",
+    "card3_description": "Direct consultations on academic programs, scholarships, and admission requirements",
+    "card4_title": "Supporting",
+    "card4_description": "Global cooperation in the field of education"
+  },
+  "counter": {
+    "title_line1": "Key",
+    "title_line2": "Exhibition",
+    "title_line3": "Statistics",
+    "card1_label": "Participants",
+    "card2_label": "Participating Countries",
+    "card3_label": "Expected Daily Visitors",
+    "card4_label": "Days of Events"
+  },
+  "joinExpo": {
+    "logo_alt": "GEB Expo",
+    "title_line1": "Welcome to the World of Knowledge!",
+    "title_line2": "GEB Expo 2025",
+    "description": "GEB Expo is not just an event, but a global collaboration to build a conscious and skilled generation, ready to lead tomorrow's transformations",
+    "cta": "Join Us"
+  },
+  "program": {
+    "title_line1": "Overview",
+    "title_line2": "of",
+    "title_line3": "the Program",
+    "description": "GEB Expo offers a diverse program of events over three days, including interactive workshops, discussion sessions with education experts, and distinguished presentations from participating universities.",
+    "cta": "Learn More"
+  },
+  "partnersCarousel": {
+    "section_label": "Success Partners Section",
+    "title": "Success Partners",
+    "logo_alts": {
+      "ministry_of_planning_and_economy": "Ministry of Planning and Economy",
+      "ministry_of_energy": "Ministry of Energy",
+      "ministry_of_finance": "Ministry of Finance",
+      "ministry_of_communications_and_information_technology": "Ministry of Communications and Information Technology",
+      "ministry_of_interior": "Ministry of Interior",
+      "ministry_of_education": "Ministry of Education",
+      "ministry_of_foreign_affairs": "Ministry of Foreign Affairs",
+      "ministry_of_environment_water_and_agriculture": "Ministry of Environment, Water, and Agriculture",
+      "ministry_of_municipalities_and_housing": "Ministry of Municipalities and Housing",
+      "ministry_of_culture": "Ministry of Culture",
+      "aramco": "Aramco",
+      "capital_market_authority": "Capital Market Authority",
+      "sdaia": "Saudi Data and Artificial Intelligence Authority",
+      "eastern_eamana": "Eastern Province Municipality",
+      "intellectual_property": "Saudi Intellectual Property Authority",
+      "ministry_of_tourism": "Ministry of Tourism",
+      "riyadh_municipality": "Riyadh Municipality",
+      "special_forces_for_environmental_security": "Special Forces for Environmental Security",
+      "monshaat": "Monshaat",
+      "royal_commission_for_makkah_and_holy_sites": "Royal Commission for Makkah and Holy Sites",
+      "king_abdulaziz_royal_reserve": "King Abdulaziz Royal Reserve Development Authority",
+      "general_entertainment_authority": "General Entertainment Authority",
+      "prince_mohammed_bin_salman_reserve": "Prince Mohammed bin Salman Reserve",
+      "king_salman_reserve": "King Salman Reserve",
+      "stc": "STC",
+      "geely": "Geely",
+      "global_experience_specialists": "Global Experience Specialists",
+      "rc_logo": "RC Logo",
+      "dmg_events": "DMG Events",
+      "al_rajhi": "Al Rajhi",
+      "society_saudi_arabia": "Society Saudi Arabia",
+      "tahakom": "Tahakom",
+      "tourism_development_fund": "Tourism Development Fund",
+      "maqsafi": "Maqsafi",
+      "informa_cityscape": "Informa Cityscape",
+      "kidana": "Kidana",
+      "informa": "Informa",
+      "japan_health": "Japan Health",
+      "blackhat": "Black Hat",
+      "saudi_federation_for_cybersecurity": "Saudi Federation for Cybersecurity"
+    }
+  },
+  "footer": {
+    "section_label": "Website Footer",
+    "logo_alt": "GEB Expo",
+    "description": "GEB Expo 2025 – The largest educational exhibition bringing together universities, schools, and experts from around the world in a single event full of opportunities and inspiration.",
+    "quick_links": "Quick Links",
+    "information": "Information",
+    "organizers": "Event Organizers",
+    "carezma_alt": "Carezma Logo",
+    "riep_alt": "RIEP Logo",
+    "links": {
+      "home": "Home",
+      "program": "Program",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact Us",
+      "privacy": "Privacy Policy",
+      "terms": "Terms and Conditions"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "facebook": "Facebook"
+    },
+    "copyright": "© All Rights Reserved to GEB Expo 2025"
+  },
+  "programPage": {
+    "section_label": "Exhibition Program Page",
+    "hero_alt": "Exhibition Program",
+    "title": "Exhibition Program",
+    "description": "Three days of inspiring events and activities — from the official opening ceremony to workshops and presentations"
+  },
+  "servicesPage": {
+    "section_label": "Exhibition Services Page",
+    "hero_alt": "Exhibition Services",
+    "title": "Exhibition Services and Facilities",
+    "description": "A comprehensive set of services to support exhibitors and visitors – from consultations and instant admission to hotel accommodation and comfortable transportation.",
+    "services": {
+      "consultations": {
+        "title": "Direct Consultations",
+        "description": "Direct consultations on academic programs, scholarships, admission requirements, and higher education options."
+      },
+      "instant_admission": {
+        "title": "Instant Admission",
+        "description": "Opportunity for instant admission to participating universities and educational institutions."
+      },
+      "meeting_rooms": {
+        "title": "Meeting Rooms",
+        "description": "Dedicated rooms for holding meetings, business discussions, and showcasing products and technologies."
+      },
+      "networking": {
+        "title": "Networking and Relationship Building",
+        "description": "Building relationships with local and international universities and fostering cooperation in the field of education."
+      },
+      "job_opportunities": {
+        "title": "Job Opportunities",
+        "description": "Discovering employment opportunities at participating universities and educational institutions."
+      }
+    }
+  },
+  "aboutPage": {
+    "section_label": "About Exhibition Page",
+    "hero_alt": "About the Exhibition",
+    "title": "About GEB Expo",
+    "description": "The largest educational platform in the region, bringing together universities, schools, and experts in a single event to showcase the latest academic opportunities and educational technologies.",
+    "overview_section": "Exhibition Overview",
+    "overview_title": "Exhibition Overview",
+    "overview_description": "GEB Expo 2025 is a leading platform in education, aiming to connect local and international academic institutions with students and those seeking educational opportunities. The event provides a space for networking, exchanging ideas, and exploring the latest educational innovations and solutions.",
+    "details_section": "Exhibition Details",
+    "details": {
+      "location": {
+        "title": "Location",
+        "text": "Riyadh - Marriott Hotel"
+      },
+      "date": {
+        "title": "Date",
+        "text": "16 - 18 November 2025"
+      },
+      "content": {
+        "title": "Content",
+        "text": "Universities, Schools, and Educational Technologies"
+      }
+    },
+    "vision_mission_section": "Vision and Mission",
+    "vision": {
+      "title": "Our Vision",
+      "text": "We are here to write a new chapter in global educational cooperation, contributing to building a knowledgeable and skilled generation capable of leading future transformations."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "Empowering students and academic institutions to connect, learn, and benefit from the latest educational solutions."
+    },
+    "why_saudi_section": "Why Saudi Arabia",
+    "why_saudi_description": "Saudi Arabia is one of the best host countries for educational exhibitions due to several factors, including its advanced infrastructure and the Kingdom's focus on education, where exhibitions are a key part of its efforts to enhance educational quality. Additionally, its distinguished strategic geographical location makes it an easily accessible destination from all parts of the world, along with a high demand for education.",
+    "organizers_section": "Event Organizers",
+    "organizers_title": "Event Organizers",
+    "organizers_description": "The exhibition is organized by {expo} through {carezma} Company and {riep} Company"
+  },
+  "mediaPage": {
+    "section_label": "Media Page",
+    "hero_alt": "Media Coverage",
+    "title": "Media at GEB Expo",
+    "description": "Extensive media coverage by major channels and newspapers to ensure the exhibition's messages reach the widest possible audience.",
+    "news_section": "News and Press Releases",
+    "news_title": "News and Press Releases",
+    "news_description": "Through GEB Expo 2025, the latest educational initiatives and partnerships will be announced. Follow the latest news here or through official media outlets.",
+    "partners_section": "Partner Media Channels",
+    "partners_title": "Partner Media Channels",
+    "highlights_section": "Key Coverage Highlights",
+    "highlights_title": "Key Coverage Highlights",
+    "highlights_description": "Links to television reports, articles, and images from various media outlets will be shared here after the exhibition begins.",
+    "contact_section": "Media Contact",
+    "contact_title": "Media Contact",
+    "contact_description": "For any inquiries or to coordinate media coverage, please contact:",
+    "mediaPartners": {
+      "saudi_news": "Saudi News Logo",
+      "saudi_channel": "Saudi Channel Logo",
+      "saudi_broadcasting": "Saudi Broadcasting Corporation Logo",
+      "mbc": "MBC Logo",
+      "rotana": "Rotana Logo",
+      "saudi_research": "Saudi Research and Media Group Logo",
+      "sabq": "Sabq Newspaper Logo",
+      "mal": "Mal Newspaper Logo",
+      "okaz": "Okaz Newspaper Logo",
+      "ml_tv": "ML TV Logo",
+      "eye_of_riyadh": "Eye of Riyadh Logo",
+      "mizaj_fm": "Mizaj FM Logo",
+      "al_madina": "Al Madina Newspaper Logo"
+    }
+  },
+  "contactPage": {
+    "section_label": "Contact Page",
+    "hero_alt": "Contact Us",
+    "title": "Contact Us",
+    "description": "We are here to answer all your inquiries — reach out to us via the form or through social media.",
+    "social_section": "Social Media",
+    "social_title": "Follow Us on Social Media",
+    "social": {
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    },
+    "form_section": "Contact Form",
+    "form_title": "Send Us a Message",
+    "form": {
+      "name_label": "Name",
+      "name_placeholder": "Enter your name here",
+      "email_label": "Email",
+      "email_placeholder": "example@email.com",
+      "message_label": "Message",
+      "message_placeholder": "Write your message here...",
+      "submit_button": "Send"
+    }
+  },
+
+  "registerPage": {
+  "hero_alt": "Registration",
+  "hero_title": "Register for GEB Expo",
+  "hero_subtitle": "Choose the registration type — Visitor or Exhibitor — and fill out the form below to participate in the event.",
+  "visitor_button": "Register as Visitor",
+  "exhibitor_button": "Register as Exhibitor",
+  "visitor_form": {
+    "title": "Visitor Registration Form",
+    "full_name": "Full Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "job": "Job / Organization"
+  },
+  "exhibitor_form": {
+    "title": "Exhibitor Registration Form",
+    "organization": "Organization / Institution Name",
+    "person_name": "Contact Person Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "details": "Participation Details"
+  },
+  "submit_button": "Submit"
+}
+
+}
