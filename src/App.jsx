@@ -9,8 +9,6 @@ import ContactPage from './Pages/ContactPage';
 import RegisterPage from './Pages/RegisterPage';
 import MediaPage from './Pages/MediaPage';
 
-
-
 export default function App() {
  
 
@@ -23,16 +21,14 @@ export default function App() {
       {/* Static Nav-bar */}
       <Navbar />
       <Routes>
-        <Route>
-          <Route path='/' element={<Home />} />
-          <Route path='/About' element={<AboutPage />} />
-          <Route path='/Program' element={<ProgramPage />} />
-          <Route path='/Services' element={<ServicesPage />} />
-          <Route path='/Media' element={<MediaPage />} />
-          <Route path='/Register' element={<RegisterPage />} />
-          <Route path='/Contact' element={<ContactPage />} />
-        </Route>
-      </Routes>
+      <Route index element={<Home />} />
+      <Route path="/About" element={<AboutPage />} />
+      <Route path="/Program" element={<ProgramPage />} />
+      <Route path="/Services" element={<ServicesPage />} />
+      <Route path="/Media" element={<MediaPage />} />
+      <Route path="/Register" element={<RegisterPage />} />
+      <Route path="/Contact" element={<ContactPage />} />
+    </Routes>
     </div>
   )
 }
