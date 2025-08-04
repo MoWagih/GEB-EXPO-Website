@@ -4,6 +4,7 @@ import Logo from '../../public/Logo.png';
 import Carezma from '../assets/imgs/carezma logo.png';
 import Riep from '../assets/imgs/RIEP.png';
 import { FaXTwitter } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const { t, i18n } = useTranslation();
@@ -23,24 +24,24 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-green-400">{t('footer.quick_links')}</h3>
             <ul className="flex flex-col gap-3 text-gray-300">
               <li>
-                <a href="/" className="hover:text-green-300 transition" aria-label={t('footer.links.home')}>
+                <Link to="/" className="hover:text-green-300 transition" aria-label={t('footer.links.home')}>
                   {t('footer.links.home')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/Program" className="hover:text-green-300 transition" aria-label={t('footer.links.program')}>
+                <Link to="/Program" className="hover:text-green-300 transition" aria-label={t('footer.links.program')}>
                   {t('footer.links.program')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/Services" className="hover:text-green-300 transition" aria-label={t('footer.links.services')}>
+                <Link to="/Services" className="hover:text-green-300 transition" aria-label={t('footer.links.services')}>
                   {t('footer.links.services')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/About" className="hover:text-green-300 transition" aria-label={t('footer.links.about')}>
+                <Link to="/About" className="hover:text-green-300 transition" aria-label={t('footer.links.about')}>
                   {t('footer.links.about')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -50,19 +51,19 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-green-400">{t('footer.information')}</h3>
             <ul className="flex flex-col gap-3 text-gray-300">
               <li>
-                <a href="/Contact" className="hover:text-green-300 transition" aria-label={t('footer.links.contact')}>
+                <Link to="/Contact" className="hover:text-green-300 transition" aria-label={t('footer.links.contact')}>
                   {t('footer.links.contact')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-green-300 transition" aria-label={t('footer.links.privacy')}>
+                <Link to="#" className="hover:text-green-300 transition" aria-label={t('footer.links.privacy')}>
                   {t('footer.links.privacy')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-green-300 transition" aria-label={t('footer.links.terms')}>
+                <Link to="#" className="hover:text-green-300 transition" aria-label={t('footer.links.terms')}>
                   {t('footer.links.terms')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
