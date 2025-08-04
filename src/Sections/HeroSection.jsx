@@ -12,7 +12,7 @@ export default function HeroSection() {
 
   return (
     <div
-      className="relative h-screen xl:w-full flex flex-col justify-center gap-2 xl:p-8 overflow-hidden"
+      className="relative h-screen w-full flex flex-col justify-center gap-2 xl:p-8 overflow-hidden"
       dir={i18n.language === "ar" ? "rtl" : "ltr"}
     >
       {/* Animated Background */}
@@ -23,13 +23,13 @@ export default function HeroSection() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col justify-center gap-2">
+      <div className="relative z-10 flex flex-col justify-center gap-2 lg:gap-6">
         {/* Main Title */}
         <div className="flex flex-col text-white text-center xl:text-start">
-          <h1 className="text-[38px] sm:text-[48px] md:text-[58px] lg:text-[80px] xl:text-[78px] font-semibold drop-shadow-lg">
+          <h1 className="text-[38px] sm:text-[48px] md:text-[58px] xl:text-[78px] font-semibold drop-shadow-lg">
             {t("hero.title")}
           </h1>
-          <h2 className="pt-4 text-[16px] sm:text-[22px] lg:text-[32px] drop-shadow-lg">
+          <h2 className="pt-4 text-[16px] sm:text-[22px] lg:text-[28px] drop-shadow-lg">
             {t("hero.subtitle")}
           </h2>
         </div>
@@ -39,18 +39,18 @@ export default function HeroSection() {
           {/* Date */}
           <div className="flex flex-col self-center xl:self-start gap-1 border w-[95%] sm:w-[30%] xl:w-[20%] text-center text-white">
             <div className="bg-[#f88b598e] flex flex-col p-2 sm:p-0 xl:p-1 items-center justify-evenly xl:flex-row">
-              <p className="border-b-2 text-[32px] sm:text-[36px] lg:text-[55px] xl:text-[24px] xl:border-0">
+              <p className="border-b-2 text-[32px] sm:text-[36px] lg:text-[52px] xl:text-[24px] xl:border-0">
                 {t("hero.date")}
               </p>
-              <p className="lg:text-[32px] xl:text-[18px]">{t("hero.month")}</p>
+              <p className="lg:text-[30px] xl:text-[18px]">{t("hero.month")}</p>
             </div>
           </div>
 
           {/* Location */}
           <div className="flex self-center xl:self-start border w-[95%] sm:w-[50%] xl:w-[30%] text-white">
             <div className="bg-[#0000008c] sm:flex-col sm:p-3 xl:flex-row text-center flex p-2 lg:p-5 items-center w-full justify-center gap-3 sm:gap-2 xl:p-2 rounded-lg">
-              <GrLocationPin className="sm:text-[20px] lg:text-[36px] xl:text-[18px]" />
-              <p className="sm:text-[18px] lg:text-[32px] xl:text-[18px]">
+              <GrLocationPin className="sm:text-[20px] lg:text-[32px] xl:text-[18px]" />
+              <p className="sm:text-[18px] lg:text-[30px] xl:text-[18px]">
                 {t("hero.location")}
               </p>
             </div>

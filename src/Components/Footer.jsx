@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Logo from '../../public/Logo.png';
 import Carezma from '../assets/imgs/carezma logo.png';
 import Riep from '../assets/imgs/RIEP.png';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
   const { t, i18n } = useTranslation();
@@ -92,7 +93,7 @@ export default function Footer() {
             {[
               { icon: <FaInstagram />, link: 'https://instagram.com', label: t('footer.social.instagram') },
               { icon: <FaLinkedin />, link: 'https://linkedin.com', label: t('footer.social.linkedin') },
-              { icon: <FaTwitter />, link: 'https://twitter.com', label: t('footer.social.twitter') },
+              { icon: <FaXTwitter />, link: 'https://twitter.com', label: t('footer.social.twitter') },
               { icon: <FaFacebookF />, link: 'https://facebook.com', label: t('footer.social.facebook') },
             ].map((item, index) => (
               <a
